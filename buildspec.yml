@@ -11,4 +11,3 @@ phases:
     commands:
       - make lint-check
       - make test
-  
