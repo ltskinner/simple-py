@@ -1,22 +1,15 @@
 
+# Each step runs in a separate container, so you should do it all in one step
+
 steps:
   - name: python:3.7
-    entrypoint: make
-    args: ["setup"]
-  
-  - name: python:3.7
-    entrypoint: make
-    args: ["source"]
-
-  - name: python:3.7
-    entrypoint: make
-    args: ["install"]
-  
-  - name: python:3.7
-    entrypoint: make
-    args: ["lint-check"]
-  
-  - name: python:3.7
-    entrypoint: make
-    args: ["test"]
-
+    id: Test
+    entrypoint: /bin/sh
+    args:
+    - -c
+    - |
+      make setup
+      make source
+      make install
+      make lint-check
+      make test
