@@ -1,0 +1,21 @@
+
+steps:
+  - name: Setup
+    entrypoint: make
+    args: ["setup"]
+  
+  - name: Source
+    entrypoint: make
+    args: ["source"]
+
+  - name: Install
+    entrypoint: make
+    args: ["install"]
+  
+  - name: Lint
+    entrypoint: make
+    args: ["lint-check"]
+  
+  - name: Test
+    entrypoint: make
+    args: ["test"]
