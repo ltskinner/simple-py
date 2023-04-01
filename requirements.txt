@@ -1,0 +1,9 @@
+
+# Linters
+pylint
+black
+flake8
+
+# Testers
+coverage
+pytest
